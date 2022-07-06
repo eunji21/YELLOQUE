@@ -1,0 +1,738 @@
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: #000;}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    color: #000;
+    line-height: 30px;
+  }
+
+
+p{
+    font-size: 18px;
+    text-align: center;
+    line-height: 36px;
+    padding-bottom: 1%;
+}
+
+h3{
+    font-size: 50px;
+    padding-bottom: 5%;
+    text-align: center;
+}
+h5{
+    font-size: 30px;
+    line-height: 42px;
+    padding-bottom: 1%;
+    font-weight: 500;
+}
+
+
+/*main*/
+#main{
+    width: 100%;
+    overflow: hidden;
+    background:url(../images/main.jpg) no-repeat center top;
+    animation: main 10s linear infinite;
+    height: 900px;
+    margin-bottom: 160px;
+  }
+  
+  @keyframes main{
+  0%{background:url(../images/main.jpg) no-repeat center top;}
+  35%{background:url(../images/main2.jpg) no-repeat center top;}
+  70%{background:url(../images/main.jpg) no-repeat center top;}
+  100%{background:url(../images/main2.jpg) no-repeat center top;}
+  }
+
+.main_inner{
+    margin: 0 auto; 
+    margin-top: 50px;
+    width: 1320px;
+    height: 850px;
+}
+.logo{float: left;}
+.gnb{float: right;}
+.gnb li{float: left;}
+.gnb li a{
+    font-size: 32px;
+    padding-left: 70px;
+    text-align: center;
+
+}
+.gnb li a:hover{color: #666;}
+
+.rightmenu{display: none;}
+
+#main h1{
+    clear: both;
+    font-size: 80px;
+    line-height: 90px;
+    color: #000;
+    padding: 15% 0 5% 10%;
+  }
+  #main h3{
+    text-align: left;
+    font-size: 50px;
+    color: #000;
+    font-weight: 500;
+    padding: 0 0 3% 10%;
+  }
+  #main p{
+    text-align: left;
+    color: #000;
+    font-size: 25px;
+    font-weight: 400;
+    padding: 5% 0 3% 10%;
+  }
+  .button{padding: 0 0 0 10%;}
+  .button:hover img{opacity: 0.8;}
+
+
+/*세줄 메뉴버튼*/				
+.total{
+	display:block;
+	width:37px;
+	height:37px;
+	position:fixed;
+	right:5%;
+	top:5%;
+	z-index:99;
+	}		
+.total span{
+	display:block;
+	position:absolute;
+	top:50%;
+	width:100%;
+	height:2px;
+	background:#000;/*가운데 줄 색상*/
+	color:transparent;
+	transform:translate(0,-50%);
+	transition:all .5s;
+	}
+.total span:before,
+.total span:after{
+	content:"";
+	position:absolute;
+	left:0;
+	top:0px;
+	width:100%;
+	height:2px;
+	background:#000;/*위,아래 줄 색상*/
+	transition:all .5s;
+	}
+.total span:before{
+	top:-15px;
+	}
+.total span:after{
+	top:15px;
+	}
+.total.on span{
+	background:rgba(0,0,0,0);
+	}
+.total.on span:before{
+	top:0px; 
+	transform: rotate(45deg);
+	}
+.total.on span:after{
+	top:0px; 
+	transform: rotate(-45deg);
+	}
+
+/*내비게이션*/
+.nav{
+	position:fixed;
+	top:0;
+	right:-100%;
+	width:100%;
+	height:100%;
+	background:rgb(255, 200, 18);
+	z-index:98;
+	transition:all 1s;
+	}
+.nav li a{
+	color:#000000;
+	font-size:30px;
+	display:block;
+	margin:8% 10%;
+}
+.nav li a:hover{color: #373737;}
+.nav_on{
+	right:0;
+}	
+
+
+
+
+
+/* 브랜드 소개 */
+#about{
+    width: 1320px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+}
+video{
+    display: block;
+    text-align: center;
+    margin-top: 8%;
+    width: 100%;
+}
+
+
+
+/* banner */
+#banner{
+    width: 100%;
+    height: 220px;
+    margin-bottom: 200px;
+}
+.banner_ul li{
+    float: left;
+}
+.banner_ul li h5{
+    padding: 5% 0 3% 28%;
+}
+.mobile{
+    width: 50%;
+    height: 220px;
+    background: url(../images/banner1.jpg) no-repeat center top;
+}
+.shop{
+    width: 50%;
+    height: 220px;
+    background: url(../images/banner2.jpg) no-repeat center top;
+}
+.button1{
+    display: inline-block;
+    padding-left: 28%;
+}
+.button1:hover{opacity: 0.7;}
+
+
+/* product */
+#product{
+    width: 100%;
+    overflow: hidden;
+    background: url(../images/bg.jpg) no-repeat center top fixed;
+    background-size: cover;
+    margin-bottom: 160px;
+}
+
+.prdt_inner{
+    width: 100%;    
+    overflow: hidden;
+    background: url(../images/gradation.png) no-repeat center 17%;
+    padding: 10% 0;
+    text-align: center;
+}
+
+.title{
+    margin-bottom: 2%;
+    width: 80%;
+}
+.title2{
+    padding-bottom: 8%;
+    width: 60%;
+}
+
+.white{
+    color: #fff;
+    font-size: 29px;
+    padding-bottom: 5%;
+}
+
+
+.contents{
+    width: 1320px;
+    margin: 0 auto;
+}
+
+
+.box li{
+    height: 420px;
+    margin: 0 4% 10% 4%;
+    text-align: center;
+}
+.left{float: left;}
+.right{float: right;}
+
+.daily{
+    padding: 26% 0 5% 0; 
+}
+
+#slide{
+    width: 1320px;
+    margin: 0 auto;
+    height: 650px;
+}
+
+
+
+/*contents3*/
+#contents3{
+    width: 100%;
+    overflow: hidden;
+  }
+  .con_inner3{
+    width:80%;
+    margin: 10%;
+    text-align: center;
+  }
+
+  
+  .gallery{
+    width: 100%;
+  }
+  
+  .gallery li{
+    float: left;
+    width: 15.83%;
+    margin-right:1%;
+    margin-bottom:1%;
+  }
+  .gallery li:nth-child(6){margin-right: 0;}
+  .gallery li:nth-child(12){margin-right: 0;}
+  
+  
+  .gallery li a{display: block;}
+  .gallery img{width:100%; display: block;}
+  
+  
+  .mono{position: relative;}
+  .color{
+    position: absolute;
+    top: 0; left: 0;
+    display: none;
+  }
+  .mono:hover .color{
+    width:100%; height:100%;
+    display: block;
+  }
+  
+  
+  .popup{
+    width: 100%; height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    top: 0; left: 0;
+    display: none;
+    z-index: 100;
+    cursor: pointer;
+  }
+  
+  .pop_img{
+    display: block;
+    position: absolute;
+    top: 50%; left: 50%;
+    margin-top: -300px;
+    margin-left: -400px;
+  }
+  .out{
+    display: block;
+    position: absolute;
+    top: 50%; left: 50%;
+    margin-top: -300px;
+    margin-left: 430px;
+  }
+  
+
+
+
+
+  /* footer */
+#footer{width: 100%; height: 500px;
+	background-color:#ffe16f;
+}
+.footer_inner{width: 800px; margin: 0 auto;
+		   padding-top: 100px;
+		   text-align: center;
+}
+.footer_logo{margin-bottom: 15px;}
+.footer_ul{padding: 0 60px;} 
+.footer_ul li{float: left;
+		  padding-left: 40px;
+		  margin-bottom: 50px;
+}
+.bold{font-weight: 700;
+	font-size: 20px;
+	color: #d8955e;
+}
+
+.footer_p{color: #d8955e;
+	margin-bottom: 10px;
+	padding-left: 50px;
+}
+.sns{padding: 100px 260px;}
+.sns li{float: left;
+	padding-left: 20px;
+}
+
+
+
+
+
+/*태블릿*/
+@media(min-width:1024px) and (max-width:1319px){
+  #main{width:100%; height: 800px;}
+	.header{width:100%;}
+    .logo{padding-left: 8%;}
+
+    /* 메인 */
+    #main h1{padding: 7% 0 3% 8%;}
+    #main h3{
+      padding:5% 0 5% 8%;
+      font-size: 45px;
+  }
+  #main p{padding:0 0 3% 8%;
+  }
+  .button{padding-left: 8%;}
+  .button img{width: 17%;}
+    
+
+    /* 어바웃 옐로끄 */
+  #about{width:100%; text-align: center;} 
+  video{width: 80%; margin: 8% auto;}
+
+
+    /* 레몬솔루션 */
+  #product{text-align: center;}
+  .prdt_inner{
+    width: 100%;    
+    overflow: hidden;
+    background: url(../images/GRADATION2.png) no-repeat center 0%;
+    padding: 10% 0;
+    text-align: center;
+}
+
+  .text1{padding:0; }
+  .textright{text-align: center;}
+
+  
+  .left{width:100%; clear: both;}
+  .right{width:100%; clear: both;}
+
+    .daily{padding: 0;}
+  .box{
+    width:60%;
+    margin:5% 14%;
+    padding-bottom: 15%;
+    height:200px;
+  }
+  .box li{height: auto; margin: 5% 0;}
+
+
+     /* 슬라이드 */
+     #slide{
+        width: 100%;
+        text-align: center;
+        height: auto;
+    }
+
+  /* 갤러리 */
+  #contents3{padding: 5% 0 15% 0;}
+  .gallery li{
+    float: left;
+    width: 24.25%;
+    margin-right:1%;
+    margin-bottom:1%;
+  }
+  .gallery li:nth-child(6){margin-right: 1%;}
+  .gallery li:nth-child(4){margin-right: 0;}
+  .gallery li:nth-child(8){margin-right: 0;}
+
+
+
+  .rightmenu{display:block;}
+  .gnb{display: none;}
+}
+
+
+/*중간*/
+
+@media(min-width:700px) and (max-width:1023px){
+    h3{font-size: 45px;}
+    h4{font-size: 30px;}
+    p{font-size: 17px; line-height: 25px;}
+    /* 메인 */
+    #main{width:100%; height: 800px;}
+    .main_inner{width: 100%;}
+
+      .header{width:100%;}
+     .logo{padding-left: 5%;}
+      #main h1{
+        padding: 16% 0 3% 8%;
+        font-size: 70px;
+        line-height: 80px;
+    }
+      #main h3{
+        padding-left: 8%;
+        font-size: 34px;
+        line-height: 50px;
+        text-align: left;
+    }
+    #main p{
+        font-size: 28px;
+        padding: 0 0 10% 8%;
+        text-align: left;
+      }
+      .button{padding-left: 8%;}
+      .button img{width: 30%;}
+
+
+      /* 어바웃 옐로끄 */
+      #about{width:100%; text-align: center;} 
+      video{width: 80%; margin: 8% auto;}
+      #about h3{padding: 6% 0;}
+     
+
+    /* 배너 */
+    #banner{height: 375px;}
+    .banner_ul li{
+        clear: both;
+        width: 100%;
+        text-align: center;
+    }
+    .banner_ul li h5{
+        font-size: 23px;
+        line-height: 35px;
+        padding: 5% 0 3% 0;
+    }
+    .button1{padding: 0;}
+    .button2{padding: 0;}
+   
+
+
+     /* 레몬솔루션 */
+    #product{text-align: center;}
+    .contents{text-align: center;}
+    .prdt_inner{
+        width: 100%;    
+        overflow: hidden;
+        background: url(../images/GRADATION2.png) no-repeat center 0%;
+        padding: 10% 0;
+        text-align: center;
+    }
+
+    #product h3{
+      clear: both;
+      padding: 10% 0 0 0;
+      text-align: center;
+    }
+    .text1{padding:0; }
+    #product .text1 p{font-size: 17px; line-height: 25px;}
+    .textright{text-align: center;}
+  
+   
+    .left{width:100%; clear: both;}
+    .right{width:100%; clear: both;}
+    .product_img{text-align: center;}
+  
+    .daily{
+        padding: 0;
+        margin-bottom: 3%;
+    }
+  .box{
+    width:60%;
+    margin: 0 7%;
+    padding-bottom: 15%;
+    height:200px;
+  }
+  .box li{height: auto; margin: 5% 0;}
+  
+      #contents2{
+      width:100%;
+      background: url(../images/academy_bg2.jpg) no-repeat top center;
+    }
+
+   /* 슬라이드 */
+   #slide{
+    width: 100%;
+    text-align: center;
+    height: auto;
+}
+
+
+    /* 갤러리 */
+    #contents3{padding: 5% 0 15% 0;}
+    .con_inner3 h3{padding-bottom: 10%;}
+    .gallery li{
+      float: left;
+      width: 24.25%;
+      margin-right:1%;
+      margin-bottom:1%;
+    }
+    .gallery li:nth-child(6){margin-right: 1%;}
+    .gallery li:nth-child(4){margin-right: 0;}
+    .gallery li:nth-child(8){margin-right: 0;}
+  
+    #footer .foot_inner p{font-size: 16px; line-height: 25px;}
+  
+      .rightmenu{display:block;}
+    .gnb{display: none;}
+  }
+
+
+
+  /*모바일*/
+@media(max-width:699px){
+
+    h3{font-size: 42px;}
+    h4{font-size: 30px;}
+    p{font-size: 16px; line-height: 25px;}
+    .mobile{display: block;}
+    .pc{display: none;}
+  
+      #main{
+      width:100%;
+      height:800px;
+      margin-bottom: 100px;
+    }
+    .main_inner{width: 100%;}
+
+  
+      .header{width:100%;}
+  
+      .gnb{display:none;}
+  
+    #main h1{
+      text-align: center;
+      font-size: 64px;
+      line-height: 75px;
+      padding: 26% 0 8% 0;
+    }
+    #main h2{
+        font-size: 32px; 
+        text-align: center;
+    }
+    #main h3{
+        text-align: center;
+        padding-left: 0;
+        line-height: 57px;
+        font-size: 44px;
+        font-weight: 500;
+    }
+
+    #main p{
+        font-size: 16px; 
+        text-align: center;
+        padding-bottom: 10%;
+    }
+    
+    .button{
+        text-align: center;
+        padding: 0 38%;
+    }
+    .button img{width: 28%;}
+  
+    /* 어바웃 옐로끄 */
+   #about{
+    width:100%;
+    margin-bottom: 120px;
+    }    
+   #about h3{padding: 10% 0;}
+   #about p{font-size: 14px;}
+  
+
+       /* 배너 */
+       #banner{width: 100%;}
+       .title2{width: 65%;}
+       .banner_ul li{
+
+        clear: both; 
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+       .banner_ul li h5{
+           font-size: 18px;
+           line-height: 30px;
+           padding: 3% 0 1% 0;
+    }
+        .button1{padding: 10px;}
+        .button2{padding: 10px;}
+  
+
+
+
+ /* 레몬솔루션 */
+ #product{text-align: center;}
+ .contents{text-align: center;}
+   .prdt_inner{
+    width: 100%;    
+    overflow: hidden;
+    background: url(../images/GRADATION2.png) no-repeat center 0%;
+    padding: 10% 0;
+    text-align: center;
+}
+ #product h3{
+   clear: both;
+   padding: 10% 0 0 0;
+   text-align: center;
+ }
+ .text1{padding:0;}
+ #product .text1 p{
+    font-size: 16px; 
+    line-height: 25px;
+ }
+ .white{font-size: 20px;}
+ .textright{text-align: center;}
+
+
+ .left{width:100%; clear: both;}
+ .right{width:100%; clear: both;}
+ .product_img{text-align: center;}
+
+ .daily{
+     padding: 0;
+     margin-bottom: 3%;
+ }
+.box{
+ width:60%;
+ margin: 0 -6%;
+ padding-bottom: 15%;
+ height:200px;
+}
+.box li{height: auto; margin: 5% 0;}
+
+   /* 슬라이드 */
+   #slide{
+    width: 100%;
+    text-align: center;
+    height: auto;
+}
+      
+
+
+    /* 갤러리 */
+    #contents3{padding: 15% 0 20% 0;}
+    .con_inner3 h3{padding-bottom: 10%;}
+    .gallery li{
+      float: left;
+      width: 32.666%;
+      margin-right:1%;
+      margin-bottom:1%;
+    }
+    .gallery li:nth-child(3){margin-right: 0;}
+    .gallery li:nth-child(6){margin-right: 0;}
+    .gallery li:nth-child(9){margin-right: 0;}
+  
+      .rightmenu{display:block;}
+    .gnb{display: none;}
+  }
+  
+  
+  .text1 p{font-size: 20px;}
+
+
+  .pop_img{
+    top: 50%; left: 50%;
+    margin-top: -300px;
+    margin-left: -300px;
+  }
+
+  /* footer
+.foot_inner{width: 100%;}
+.footer_ul{text-align: center;}
+.sns{padding: 0 23%;} */
