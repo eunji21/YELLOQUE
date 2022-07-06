@@ -85,7 +85,7 @@ h5{
     color: #000;
     font-size: 25px;
     font-weight: 400;
-    padding: 5% 0 3% 10%;
+    padding: 0 0 3% 10%;
   }
   .button{padding: 0 0 0 10%;}
   .button:hover img{opacity: 0.8;}
